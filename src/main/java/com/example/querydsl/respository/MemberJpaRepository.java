@@ -64,9 +64,11 @@ public class MemberJpaRepository {
                         ageLoe(condition.getAgeLoe()))
                 .fetch();
     }
+
     private BooleanExpression usernameEq(String username) {
         return isEmpty(username) ? null : member.username.eq(username);
     }
+
     private BooleanExpression teamNameEq(String teamName) {
         return isEmpty(teamName) ? null : team.name.eq(teamName);
     }
